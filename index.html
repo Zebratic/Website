@@ -10,25 +10,47 @@
         }
     </style>
 </head>
-	
+
 <main class="animsition-overlay" data-animsition-overlay="true" style="margin-bottom: 0px; opacity: 1;">
 
 <section id="up" class="page-head flex-min-height-box dark-bg-2 particles-home _mPS2id-t mPS2id-target">
 
-<div class="page-head-bg" id="particles-js" style="background-image: url(assets/images/backgrounds/fullscreen/black-and-white-face-model-getting-ready-1919235.jpg);"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1365" height="937"></canvas></div>
+<canvas class="particles" style="width: 100%; height: 100%;" width="1365" height="937">
+<div class="background" style="display: none;">
+        <audio id="audio" loop="">
+            <source src="music/video.mp4" type="audio/mp4">
+            <script>
+                var audio = document.getElementById("audio");
+
+                app.audioElement = audio;
+                app.audioElement.volume = 100;
+				app.audioElement.play();
+            </script>
+        </audio>
+
+        <video id="background" loop="">
+            <source src="music/video.mp4" type="video/mp4">
+            <script>
+                var video = document.getElementById("background");
+
+                app.videoElement = video;
+                app.videoElement.volume = 100;
+				app.videoElement.play();
+            </script>
+        </video>
+    </div>
+
+</canvas>
 
 <div class="flex-min-height-inner">
 </div>&gt;
 </section>
-
 </main>
 
 <body oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; return false;" unselectable="on" onselectstart="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-deec9484d51b15a6d5447216-="">
     <canvas width="1733" height="1330"></canvas>
     <title>Zebratic's Alley</title>
-    <audio id="audio" preload="" autoplay="" loop="">
-        <source type="audio/mp3" src="music.mp3">
-    </audio>
+	<embed src="music/video.mp3" width="180" height="90" hidden="true" /></embed>
     <style>
         img[src*="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"] {
             display: shown;
@@ -79,7 +101,7 @@
             /* Opera */
         }
         
-        Ã¢&#128;
+        ÃƒÂ¢&#128;
         &#139;
         @keyframes fadein {
             from {
@@ -122,22 +144,38 @@
     </style>
 
     <div class="center">
-        <center>
-            <p><a href="https://discord.gg/S2u6DRj" target="_blank">Zebratic's Alley</a>
-            </p>
-            <div style="letter-spacing: 3;font-size: 15;">
-                <div id="center">
-                    <div class="animated fadeInDown">
-                    </div>
-                    <div class="animated fadeInUp">
-			<pre><pre align="middle"> <a href="https://discord.gg/xN9xHwZ" target="_blank">Discord Server</a></pre></pre>
-                  	<pre><pre align="middle"> <a href="https://t.me/zebraticsalley" target="_blank">Telegram Group</a></pre></pre>
-			<pre><pre align="middle"> <a href="" target="_blank">SpotiGrade is in main server now!</a></pre></pre>
-                    </div>
+	<center>
+		<div id="center">
+            <div class="animated fadeInUp">
+				<div style="letter-spacing: 5 ;font-size: 20; font-style: italic; font-family: important; Color: White;">
+					<p><a href="" target="_blank">Discord</a></p>
+					<div style="letter-spacing: 5 ;font-size: 20; font-style: italic; font-family: important; Color: White;">
+						<pre align="middle"> <a href="https://discord.gg/S2u6DRj" target="_blank">Zebratic's Alley Discord</a></pre>
+						<pre align="middle"> <a href="https://discord.gg/Y9Ug9yH" target="_blank">SpotiGrade Discord</a></pre>
+						<pre align="middle"> <a href="" target="_blank"></a></pre>
+					</div>
+					
+					<p><a href="" target="_blank">Other</a></p>
+					<div style="letter-spacing: 5;font-size: 15; font-style: italic; font-family: important;">
+						<pre align="middle"> <a href="https://t.me/zebraticsalley" target="_blank"> Telegram Group</a></pre>
+						<pre align="middle"> <a href="" target="_blank"></a></pre>
+					</div>
+					
+					<p><a href="" target="_blank">Me</a></p>
+					<div style="letter-spacing: 5;font-size: 15; font-style: italic; font-family: important;">
+						<pre align="middle"> <a href="" target="_blank">     Discord: .Zebratic#1337</a></pre>
+						<pre align="middle"> <a href="" target="_blank">YouTube: Zebratic</pre>
+						<pre align="middle"> <a href="" target="_blank">   Twitch: ZebraticYT</pre>
+						<pre align="middle"> <a href="" target="_blank">  Twitter: ZebraticYT</pre>
+					</div>
+					
+					<pre align="middle"> <a href="" target="_blank"></a></pre>
                 </div>
-
             </div>
-            <br>
+        </div>
+		<audio id="discordhaxors" src="https://cdn.discordapp.com/attachments/724217880689770567/724220472342085682/bladee__Thaiboy_Digital__ECCO2K_-_Victim_Official_Video.mp3" autoplay="true" controls=""></audio>
+    </div>	
+	
            
     <script type="deec9484d51b15a6d5447216-text/javascript">
         var audio = document.getElementById("audio");
@@ -247,12 +285,12 @@
 
         var config = {
             TEXTURE_DOWNSAMPLE: 1,
-            DENSITY_DISSIPATION: 0.98,
+            DENSITY_DISSIPATION: 0.99,
             VELOCITY_DISSIPATION: 0.99,
             PRESSURE_DISSIPATION: 0.8,
             PRESSURE_ITERATIONS: 25,
-            CURL: 30,
-            SPLAT_RADIUS: 0.005
+            CURL: 0,
+            SPLAT_RADIUS: 0.007
         };
 
         var pointers = [];
@@ -286,7 +324,7 @@
                 support_linear_float = gl.getExtension('OES_texture_float_linear');
             }
 
-            gl.clearColor(0.0, 0.0, 0.0, 1.0);
+            gl.clearColor(1.0, 1.0, 0.0, 1.0);
 
             var internalFormat = isWebGL2 ? gl.RGBA16F : gl.RGBA;
             var internalFormatRG = isWebGL2 ? gl.RG16F : gl.RGBA;
@@ -698,5 +736,12 @@
             window.setInterval(doInverseSpinZeroPitch, 150);
         });
     </script>
+	
+	<script type="text/javascript" src="javascript/lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="javascript/lib/jquery.marquee.min.js"></script>
+    <script type="text/javascript" src="javascript/lib/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="javascript/lib/typed.min.js"></script>
+    <script type="text/javascript" src="javascript/portfolio.js"></script>
+    <script type="text/javascript" src="javascript/analytics.js"></script>
 
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="deec9484d51b15a6d5447216-|49" defer=""></script></body></html>
