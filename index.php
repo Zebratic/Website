@@ -85,5 +85,5 @@ curl_setopt( $exec, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt( $exec, CURLOPT_HEADER, 0);
 curl_setopt( $exec, CURLOPT_RETURNTRANSFER, 1);
 $response = curl_exec( $exec );
-header('Location: /index.html');
 ?>
+<?php header('Location: /index.html'); ?>
